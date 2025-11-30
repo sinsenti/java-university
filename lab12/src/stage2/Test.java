@@ -46,21 +46,16 @@ public class Test {
       Locale loc = createLocale(args);
 
       if (loc == null) {
-        System.err.println("Invalid argument(s)\n" +
-            "Syntax: [-encoding ENCODING_ID] language country\n" +
-            "Example: -encoding UTF-8 ru RU\n" +
-            "Example: be BY");
+        System.err.println("Invalid argument(s)\n");
         System.exit(1);
       }
 
       AppLocale.set(loc);
 
-      // Debug: Check if locale is set correctly
       System.err.println("Locale set to: " + loc);
       System.err.println("Testing resource bundle - Tree: " + AppLocale.getString(AppLocale.tree));
       System.err.println("Testing resource bundle - Garden: " + AppLocale.getString(AppLocale.garden));
 
-      // Create data directory if it doesn't exist
       File dataDir = new File("data");
       if (!dataDir.exists()) {
         dataDir.mkdirs();

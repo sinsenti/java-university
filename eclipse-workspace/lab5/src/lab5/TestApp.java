@@ -7,8 +7,8 @@ public class TestApp {
     try {
       Computer[] computers = {
           new Desktop("Dell XPS", 1500.0, "Intel i7", 16, "Mini Tower"),
-          new Notebook("MacBook Pro", 2000.0, "Apple M1", 8, 10.5),
           new Desktop("HP Pavilion", 800.0, "AMD Ryzen 5", 8, "Desktop"),
+          new Notebook("MacBook Pro", 2000.0, "Apple M1", 8, 10.5),
           new Notebook("Lenovo ThinkPad", 1200.0, "Intel i5", 16, 15.0),
           new Desktop("Asus ROG", 1800.0, "Intel i9", 32, "Gaming")
       };

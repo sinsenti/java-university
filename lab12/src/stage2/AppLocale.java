@@ -32,62 +32,7 @@ public class AppLocale {
           });
     } catch (Exception e) {
       System.err.println("Error loading resource bundle: " + e.getMessage());
-      resourceBundle = createFallbackBundle();
     }
-  }
-
-  private static ResourceBundle createFallbackBundle() {
-    return new ResourceBundle() {
-      @Override
-      protected Object handleGetObject(String key) {
-        switch (key) {
-          case "tree":
-            return "Tree";
-          case "age":
-            return "Age";
-          case "fruiting":
-            return "Fruiting";
-          case "creation":
-            return "Creation Time";
-          case "needs_transplant":
-            return "Needs transplant";
-          case "no_transplant":
-            return "No transplant needed";
-          case "apple_tree":
-            return "Apple Tree";
-          case "cherry_tree":
-            return "Cherry Tree";
-          case "pear_tree":
-            return "Pear Tree";
-          case "garden":
-            return "Trees Garden";
-          case "tree_id":
-            return "Tree ID";
-          case "transplant_decision":
-            return "Transplant decision";
-          default:
-            return "[" + key + "]";
-        }
-      }
-
-      @Override
-      public Enumeration<String> getKeys() {
-        Vector<String> keys = new Vector<>();
-        keys.add("tree");
-        keys.add("age");
-        keys.add("fruiting");
-        keys.add("creation");
-        keys.add("needs_transplant");
-        keys.add("no_transplant");
-        keys.add("apple_tree");
-        keys.add("cherry_tree");
-        keys.add("pear_tree");
-        keys.add("garden");
-        keys.add("tree_id");
-        keys.add("transplant_decision");
-        return keys.elements();
-      }
-    };
   }
 
   public static Locale get() {
